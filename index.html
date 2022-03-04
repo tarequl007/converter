@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/x-icon" href="images/">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/navbar-fixed.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Decemal to Binary Converter</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="input-area">
+            <h1 class="text-center text-info">Decemal To Binary</h1><br>
+            <input class="form-control" type="number" placeholder="Enter Your Decimal Number" name="" id="inputNumber"><br>
+            <h3 class="text-success"> Binary : <span id="resultNumber"></span></h3> <br>
+            <button id="convertBtn" class="btn btn-primary btn-block btn-lg">Convert</button>
+        </div>
+        <footer>
+            <p class="text-center lead">Copyright © TAREQ 2022 Verson : 1.0</p>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- Main JS -->
+
+    <script>
+        const resultNumber = document.getElementById('resultNumber');
+        const convertBtn = document.getElementById('convertBtn');
+
+        function binary() {
+
+            let num = document.getElementById('inputNumber').value;
+
+            if (num === '') {
+                alert('Please Enter a Number !')
+            } else if (num < 0) {
+                alert('Must be Enter Positive Number !')
+            } else {
+                resultNumber.style.visibility = 'visible'
+            }
+
+            // Convert
+            let binaryNumber = Number(num).toString(2);
+            resultNumber.innerText = binaryNumber;
+        }
+
+        convertBtn.addEventListener('click',
+            binary)
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+.container {
+    background-color: #E7EAED;
+    min-height: 580px;
+}
+
+.input-area {
+    padding: 50px;
+}
+
+#resultNumber {
+    visibility: hidden;
+}
+
+#inputNumber {
+    font-size: 23px;
+    color: green;
+}
